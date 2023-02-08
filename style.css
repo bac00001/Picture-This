@@ -35,6 +35,8 @@ img {
 
 @media (min-width: 960px) {
   .header {
-    grid-template-columns: repeat(2, 1fr);
+    /* changes the grid-template-columns to (auto max-content) to make the picture align to the right and make both columns responsive. */
+    grid-column: 2;
+    grid-template-columns: auto max-content;
   }
 }

@@ -2,22 +2,61 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Picture This!</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="title">
-      <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
-    </div>
-    <img src="images/museum.jpg" alt="placeholder">
+        <header class="header">
+                <div class="title grid-left">
+                        <h1>Picture This!</h1>
+                        <h4>My Really Cool Blog Post</h4>
+                </div>
 
-  </header>
+                <picture class="picture">
+                        <source srcset="images/museum-square-800px.png,
+                                        images/museum-square-1600px.png 2x,
+                                        images/museum-square-2400px.png 3x"
+                                media="(min-width: 1600px)"/>
+                    
+                        <source srcset="images/museum-square-640px.png,
+                                        images/museum-square-1280px.png 2x,
+                                        images/museum-square-1920px.png 3x"
+                                media="(min-width: 1280px)"/>
+                    
+                        <source srcset="images/museum-square-480px.png,
+                                        images/museum-square-960px.png 2x,
+                                        images/museum-square-1440px.png 3x"
+                                media="(min-width: 960px)" />
+                    
+                        <source srcset="images/museum-landscape-960px.png,
+                                        images/museum-landscape-1920px.png 2x,
+                                        images/museum-landscape-2880px.png 3x"
+                                media="(min-width: 720px)"/>
+                  
+                        <source srcset="images/museum-landscape-720px.png,
+                                        images/museum-landscape-1440px.png 2x,
+                                        images/museum-landscape-2160px.png 3x"
+                                media="(min-width: 480px)"/>
+                  
+                        <source srcset="images/museum-landscape-480px.png,
+                                        images/museum-landscape-960px.png 2x,
+                                        images/museum-landscape-1440px.png 3x"
+                                media="(min-width: 320px)"/>
+                  
+                        <source srcset="images/museum-landscape-320px.png,
+                                        images/museum-landscape-640px.png 2x,
+                                        images/museum-landscape-960px.png 3x"
+                                media="(max-width: 319px)" />
+                    
+                        <img class="orig-img"
+                             src="images/museum-square-1280px.png"
+                             alt="person looking at paintings, which are hung on the wall of the museum.">
+                    </picture>
+        </header>
 </body>
 
 </html>
